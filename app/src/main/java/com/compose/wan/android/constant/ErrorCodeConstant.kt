@@ -1,7 +1,6 @@
 package com.compose.wan.android.constant
 
-class ErrorCodeConstant {
-    companion object {
-        const val SUCCESS = 0
-    }
+object ErrorCodeConstant {
+    const val SUCCESS = 0
+
 }
