@@ -2,6 +2,7 @@ package com.compose.wan.android.net
 
 import com.compose.wan.android.constant.ApiConstant
 import com.compose.wan.android.model.response.HomeArticleListResp
+import com.compose.wan.android.model.response.SingleHomeBanner
 import kotlinx.serialization.json.Json
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -45,4 +46,7 @@ interface WanService {
     suspend fun getHomeArticles(
         @Path("page") page: Int
     ): HomeArticleListResp
+
+    @GET(ApiConstant.HOME_BANNER)
+    suspend fun getHomeBanners(): List<SingleHomeBanner>
 }

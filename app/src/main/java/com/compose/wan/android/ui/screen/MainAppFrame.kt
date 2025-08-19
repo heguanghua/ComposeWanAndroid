@@ -129,7 +129,7 @@ fun MainAppFrame() {
 private fun whichIcon(screen: String, isSelect: Boolean): Int {
     return when (screen) {
         Routes.MAIN_HOME -> {
-            if (isSelect) R.drawable.ic_bottom_hots_selected else R.drawable.ic_bottom_home_normal
+            if (isSelect) R.drawable.ic_bottom_home_selected else R.drawable.ic_bottom_home_normal
         }
 
         Routes.MAIN_NEWS -> {

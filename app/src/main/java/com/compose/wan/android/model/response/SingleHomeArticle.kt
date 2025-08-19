@@ -5,11 +5,16 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SingleHomeArticle (
-    @SerialName("author") val author: String = "",
+    @SerialName("title") val title: String,
 
-    @SerialName("shareUser") val shareUser: String = "",
+    @SerialName("author") val author: String?,
 
-    @SerialName("link") val link: String = "",
+    @SerialName("shareUser") val shareUser: String?,
+
+    @SerialName("chapterName") val chapterName: String,
+
+    @SerialName("link") val link: String? = "",
 
     @SerialName("niceDate") val niceDate: String = "",
+    @SerialName("collect") val isCollect: Boolean = false,
 )

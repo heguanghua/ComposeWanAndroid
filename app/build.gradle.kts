@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.logging.interceptor)
     implementation(libs.retrofit.kotlin.serialization)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
+    implementation("io.coil-kt:coil-compose:2.7.0")
     // hilt
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
