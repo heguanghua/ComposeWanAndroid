@@ -120,7 +120,7 @@ fun MainAppFrame() {
                 composable(Routes.MAIN_HOME) { HomeScreen() }
                 composable(Routes.MAIN_NEWS) { NewsScreen() }
                 composable(Routes.MAIN_STRUCTURE) { StructScreen() }
-                composable(Routes.MAIN_PROFILE) { ProfileScreen() }
+                composable(Routes.MAIN_PROFILE) { ProfileScreen(navController) }
             }
         }
     }
