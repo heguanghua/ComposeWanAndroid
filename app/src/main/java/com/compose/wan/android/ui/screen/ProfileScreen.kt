@@ -48,7 +48,7 @@ fun ProfileScreen(navController: NavController,) {
             content = "logout",
             click = {
             SpHelper.clearUserInfo()
-            navController.navigate(Routes.LOGIN)
+            navController.navigate(Routes.REGISTER)
         })
     }
 }

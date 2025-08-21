@@ -44,13 +44,13 @@ fun MainAppFrame() {
         bottomBar = {
             val currentDestination = navController.currentBackStackEntryAsState().value?.destination
             // 仅在主界面显示底部栏
-            if (currentRoute in listOf(Routes.MAIN_HOME, Routes.MAIN_NEWS, Routes.MAIN_STRUCTURE, Routes.MAIN_PROFILE)) {
+            if (currentRoute in listOf(Routes.MAIN_HOME, Routes.MAIN_POPULAR, Routes.MAIN_STRUCTURE, Routes.MAIN_PROFILE)) {
                 NavigationBar(
                     containerColor = Color.White,
                     modifier = Modifier,
                     windowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom)
                 ) {
-                    listOf(Routes.MAIN_HOME, Routes.MAIN_NEWS, Routes.MAIN_STRUCTURE, Routes.MAIN_PROFILE).forEachIndexed { index, item ->
+                    listOf(Routes.MAIN_HOME, Routes.MAIN_POPULAR, Routes.MAIN_STRUCTURE, Routes.MAIN_PROFILE).forEachIndexed { index, item ->
                         val curRoute = item
                         val isSelect =
                             currentDestination?.hierarchy?.any { it.route == curRoute } == true
@@ -118,7 +118,7 @@ fun MainAppFrame() {
                 route = Routes.MAIN_GRAPH
             ) {
                 composable(Routes.MAIN_HOME) { HomeScreen() }
-                composable(Routes.MAIN_NEWS) { NewsScreen() }
+                composable(Routes.MAIN_POPULAR) { PopularScreen() }
                 composable(Routes.MAIN_STRUCTURE) { StructScreen() }
                 composable(Routes.MAIN_PROFILE) { ProfileScreen(navController) }
             }
@@ -132,7 +132,7 @@ private fun whichIcon(screen: String, isSelect: Boolean): Int {
             if (isSelect) R.drawable.ic_bottom_home_selected else R.drawable.ic_bottom_home_normal
         }
 
-        Routes.MAIN_NEWS -> {
+        Routes.MAIN_POPULAR -> {
             if (isSelect) R.drawable.ic_bottom_news_selected else R.drawable.ic_bottom_news_normal
         }
 

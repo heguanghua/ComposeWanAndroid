@@ -7,7 +7,7 @@ object Routes {
 
     // 主界面路由
     const val MAIN_HOME = "home"
-    const val MAIN_NEWS = "news"
+    const val MAIN_POPULAR = "popular"
     const val MAIN_STRUCTURE = "structure"
     const val MAIN_PROFILE = "profile"
 

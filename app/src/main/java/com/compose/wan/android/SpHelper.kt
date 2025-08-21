@@ -16,6 +16,14 @@ object SpHelper {
         return sp.getString(key, null)
     }
 
+    fun putStringList(key: String, value: List<String>) {
+        sp.edit { putString(key, value.joinToString(",")) }
+    }
+
+    fun getStringList(key: String): List<String> {
+        return sp.getString(key, null)?.split(",") ?: emptyList()
+    }
+
     fun clearUserInfo() {
         sp.edit {
             remove(SpKey.USER_NAME)

@@ -16,5 +16,6 @@ data class SingleHomeArticle (
     @SerialName("link") val link: String? = "",
 
     @SerialName("niceDate") val niceDate: String = "",
+
     @SerialName("collect") val isCollect: Boolean = false,
 )

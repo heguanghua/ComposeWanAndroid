@@ -8,5 +8,6 @@ data class SingleHomeBanner (
     @SerialName("imagePath") val imagePath: String,
 
     @SerialName("url") val url: String,
+
     @SerialName("desc") val desc: String,
 )
